@@ -1,4 +1,109 @@
 body{
     font: 16px Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(247, 247, 247);
+    margin: 0;
+}
+.big-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.header, .main, .footer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header, .footer{
+    background-color: #329894;
+}
+.main{
+    background-color: #fff2e7;
+}
+.header .text{
+    color: white;
+    font-size: 28px;
+    font-weight: 300;
+    padding: 20px 0;
+    text-align: center;
+}
+.logo{
+    padding-top: 44px;
+    position: relative;
+    left: -332px;
+}
+#katex-logo{
+    width: 165px;
+}
+.buttons {
+    margin: 10px 0;
+    text-align: center;
+}
+.buttons a {
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: 700;
+    margin: 0 10px;
+    padding: 8px 24px;
+    text-decoration: none;
+}
+.header .buttons img {
+    width: 22px;
+    position: relative;
+    top: 3px;
+    padding-right: 4px;
+}
+.header .buttons a {
+    border: 3px solid;
+    color: #fff;
+}
+.header .buttons a:hover {
+    background: rgb(255 255 255 / 10%);
+}
+.demo {
+    display: flex;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    font-size: 22px;
+    margin: 50px 0 0;
+    width: 800px;
+}
+.demo-left,
+.demo-right {
+    padding: 20px 30px 30px;
+    height: 260px;
+    width: 100%;
+}
+.demo-left {
+    background: #444;
+    display: flex;
+    flex-direction: column;
+}
+.demo-right {
+    background: #fff;
+    color: #444;
+}
+.demo-left textarea {
+    background: #000;
+    border: none;
+    color: #fff;
+    font: 14px Menlo, monospace;
+    padding: 10px;
+    flex-grow: 1;
+    resize: none;
+}
+.description-left{
+    font-size: 22px;
+    color: rgb(220, 220, 220);
+    padding-bottom: 10px;
+}
+.description-right{
+    font-size: 22px;
+    color: rgb(89, 89, 89);
+    padding-bottom: 10px;
+}
+.formula
+{
+    font-size: 18px;
+    padding-top: 10px;
 }
