@@ -20,6 +20,7 @@ body{
 }
 .main{
     background-color: #fff2e7;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
 }
 .header .text{
     color: white;
@@ -67,11 +68,12 @@ body{
     font-size: 22px;
     margin: 50px 0 0;
     width: 800px;
+    height: 250px;
 }
 .demo-left,
 .demo-right {
     padding: 20px 30px 30px;
-    height: 260px;
+    height: 100%;
     width: 100%;
 }
 .demo-left {
@@ -89,7 +91,8 @@ body{
     color: #fff;
     font: 14px Menlo, monospace;
     padding: 10px;
-    flex-grow: 1;
+    height: 150px;
+    /* flex-grow: 1; */
     resize: none;
 }
 .description-left{
@@ -99,11 +102,31 @@ body{
 }
 .description-right{
     font-size: 22px;
-    color: rgb(89, 89, 89);
+    color: rgb(117, 117, 117);
     padding-bottom: 10px;
 }
 .formula
 {
     font-size: 18px;
     padding-top: 10px;
+}
+.slogan{
+    color: #329894;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 40px 0 30px 0;
+    text-align: center;
+}
+.main ul {
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 540px;
+}
+.main li{
+    margin: 0 0 20px 0;
+}
+.main b {
+    font-weight: 400;
 }

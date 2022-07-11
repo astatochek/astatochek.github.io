@@ -35,12 +35,32 @@
                     </textarea>
                 </div>
                 <div class="demo-right">
-                    <div class="description-right">See how it renders with <b>KaTeX</b>:</div>
+                    <div class="description-right">See how it renders with KaTeX:</div>
                     <div class="formula">$$ f(x) = \int_{-\infty}^\infty\hat f(\xi),e^{2 \pi i \xi x}\,d\xi $$</div>
                 </div>
             </div>
         </div>
-        <div class="main">$$ \int f(x) $$</div>
+        <div class="main">
+            <div class="slogan">Simple API, no dependencies – yet super fast on all major browsers.</div>
+            <ul>
+                <li><b>Fast:</b> KaTeX renders its math synchronously and doesn't need to reflow the page.</li>
+                <li><b>Print quality:</b> KaTeX's layout is based on Donald Knuth's TeX, the gold standard for math typesetting.</li>
+                <li><b>Self contained:</b> KaTeX has no dependencies and can easily be bundled with your website resources.</li>
+                <li><b>Server side rendering:</b> KaTeX produces the same output regardless of browser or environment, so you can pre-render expressions using Node.js and send them as plain HTML.</li>
+            </ul>
+            <div class="example">
+                <p>
+                    $$ \displaystyle\frac{1}{\left(\sqrt{\varphi\sqrt5} - \varphi\right)e^{\frac{2}{5}\pi}} = 1 + \frac{e^{-2\pi}}{1 + \frac{e^{-4\pi}}{1 + \frac{e^{-6\pi}}{1 + \frac{e^{-8\pi}}{1 + \dots}}}}$$
+                </p>
+                <p>
+                    $$ \displaystyle\left(\sum\limits_{k=1}^n a_kb_k\right)^2 \le \left(\sum\limits_{k=1}^n a_k^2\right)\left(\sum\limits_{k=1}^n b_k^2\right) $$
+                </p>
+                <p>
+                    $$ \displaystyle 1 + \frac{q^2}{(1-q)} + \frac{q^6}{(1-q)(1-q^2)} + \dots = \prod\limits_{j=0}^\infty\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},~~~~~~\text{for}~|q| < 1$$
+                </p>
+            </div>
+            <div class="slogan">Lightning-fast, even on pages with hundreds of expressions:</div>
+        </div>
         <div class="footer">text 3</div>
     </div>
 </body>
