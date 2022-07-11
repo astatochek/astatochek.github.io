@@ -38,7 +38,8 @@ body{
     width: 165px;
 }
 .buttons {
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
 }
 .buttons a {
@@ -61,6 +62,22 @@ body{
 }
 .header .buttons a:hover {
     background: rgb(255 255 255 / 10%);
+}
+.main .buttons img {
+    width: 22px;
+    position: relative;
+    top: 3px;
+    padding-right: 4px;
+}
+.main .buttons a {
+    border: 3px solid;
+    color: rgb(50,152,148);
+}
+.main .buttons a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+.main{
+    padding-bottom: 20px;
 }
 .demo {
     display: flex;
@@ -92,7 +109,6 @@ body{
     font: 14px Menlo, monospace;
     padding: 10px;
     height: 150px;
-    /* flex-grow: 1; */
     resize: none;
 }
 .description-left{
@@ -129,4 +145,62 @@ body{
 }
 .main b {
     font-weight: 400;
+}
+.main .compare{
+    display: flex;
+    width: 800px;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+.main .compare .col{
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+}
+.main .container img {
+    width: 800px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    position: absolute;
+}
+.main .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    margin-bottom: 20px;
+}
+.footer{
+    z-index: -1;
+}
+.footer .wrapper{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer .logo{
+    height: 28px;
+    width: 178px;
+}
+.footer .logo img{
+    height: 28px;
+    width: 178px;
+    position: relative;
+    left: 340px;
+    top: -40px
+}
+.credits {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+}
+.credits a {
+    color: white;
+}
+.credits img {
+    height: 26px;
+    vertical-align: middle;
 }
