@@ -12,7 +12,7 @@ for (let i = 0; i < 9; i++){
 }
 document.getElementById("reset").addEventListener("click", () => (resetGame()));
 /**
- * Делает выбранную ячейку выбранной (disabled) 
+ * Делает выбранную ячейку выбранной (disabled) и вызывает nextTurn()
  * @param {int} num - индекс ячейки (0-8)
  */
 function buttonClicked(num){
@@ -20,7 +20,7 @@ function buttonClicked(num){
     nextTurn();
 }
 /**
- * Меняет стиль всех ячеек с x-button на o-button или наоборот
+ * Меняет стиль всех ячеек с x-button на o-button или наоборот; если номер хода нечетный - вызывает makeComputerTurn()
  */
 function nextTurn(){
     checkResults();
@@ -61,7 +61,7 @@ function makeComputerTurn(){
     buttonClicked(chosenMove);
 }
 /**
- * Завершение игры и вывод победителя
+ * Завершение игры и изменение счета
  * @param {int} num - индекс тройки в массиве combinations
  */
 function endGame(num){
