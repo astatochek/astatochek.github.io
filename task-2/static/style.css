@@ -21,7 +21,7 @@ body{
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
-button{
+.board button{
     margin: 2px;
     background-color: #15616d;
     border: 0;
@@ -31,12 +31,37 @@ button{
     background-position: center;
     cursor: pointer;
 }
-.x-button:hover{
+.board .x-button:hover{
     background-image: url("https://imgur.com/UmbsAhY.png");
 }
-.x-button:active, .x-button:disabled{
+.board .x-button:active, .x-button:disabled{
     background-image: url("https://imgur.com/b1Os5Dm.png");
 }
-.o-button{
+.board .o-button:hover{
+    background-image: url("https://imgur.com/eZSe2iJ.png");
+}
+.board .o-button:active, .o-button:disabled{
     background-image: url("https://imgur.com/zK6ShCP.png");
+}
+.reset-button{
+    background-color: transparent;
+    border: none;
+    color: #ffecd1;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #ffecd1;
+    font: 30px 'Gothic A1', sans-serif;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+.reset-button:hover{
+    color: #001524;
+    border: 2px solid #001524;
+    background-color: #ffecd1;
 }
