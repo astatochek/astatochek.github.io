@@ -57,7 +57,8 @@ function makeComputerTurn(){
         checkResults()
         return;
     }
-    let chosenMove = getRandomElement(possibleMoves);
+    // let chosenMove = getRandomElement(possibleMoves);
+    let chosenMove = makeMoveDecision();
     buttonClicked(chosenMove);
 }
 /**
@@ -138,3 +139,88 @@ function resetGame(){
     turn = 0;
     gameOver = false;
 }
+/**
+ * Компьютер принимет решение, куда поставить o
+ * @return {int} ячейка, в которую надо поставить o
+ */
+ function makeMoveDecision(){
+    let winMove = checkEveryPair("o-button");
+    if (winMove != -1){
+        return winMove;
+    }
+    let notLoseMove = checkEveryPair("x-button");
+    if (notLoseMove != -1){
+        return notLoseMove;
+    }
+    if (turn == 1){
+        if (checkIfSet(4, "x-button")){
+            return getRandomElement([0, 2, 6, 8]);
+        }
+        if (checkIfSet(1, "x-button")){
+            return getRandomElement([0, 2]);
+        }
+        if (checkIfSet(3, "x-button")){
+            return getRandomElement([0, 6]);
+        }
+        if (checkIfSet(7, "x-button")){
+            return getRandomElement([6, 8]);
+        }
+        if (checkIfSet(5, "x-button")){
+            return getRandomElement([2, 8]);
+        }
+        return 4;
+    }
+    if (turn == 3){
+        if (checkIfSet(0, "x-button") && checkIfSet(8, "x-button")){
+            return getRandomElement([3, 5]);
+        }
+        if (checkIfSet(2, "x-button") && checkIfSet(6, "x-button")){
+            return getRandomElement([3, 5]);
+        }
+    }
+    let possibleMoves = [];
+    for (let i = 0; i < 9; i++){
+        if (checkIfEmpty(i)){
+            possibleMoves.push(i)
+        }
+    }
+    console.log(possibleMoves);
+    return getRandomElement(possibleMoves);
+ }
+ /**
+  * Проверка каждой пары на то, требуется ли ее дополнить до тройки
+  * @param {String} code - "x-button" или "o-button"
+  * @return {Boolean} индекс ячейки или -1, если такая отсутствует
+  */
+ function checkEveryPair(code){
+    for (let i = 0; i < combinations.length; i++){
+        let triplet = combinations[i];
+        if (checkIfSet(triplet[0], code) && checkIfSet(triplet[1], code) && checkIfEmpty(triplet[2])){
+            return triplet[2];
+        }
+        if (checkIfSet(triplet[0], code) && checkIfEmpty(triplet[1]) && checkIfSet(triplet[2], code)){
+            return triplet[1];
+        }
+        if (checkIfEmpty(triplet[0]) && checkIfSet(triplet[1], code) && checkIfSet(triplet[2], code)){
+            return triplet[0];
+        }
+    }
+    return -1;
+ }
+ /**
+  * Проверка, занята ли ячейка x-ом или o-м
+  * @param {int} num - индекс 0-8
+  * @param {String} code - "x-button" или "o-button"
+  * @return {Boolean} True/False
+  */
+ function checkIfSet(num, code){
+    return document.getElementById(num).disabled && document.getElementById(num).className == code;
+ }
+   /**
+  * Проверка, не занята ли ячейка
+  * @param {int} num - индекс 0-8
+  * @return {Boolean} True/False
+  */
+    function checkIfEmpty(num){
+        return !document.getElementById(num).disabled;
+     }
