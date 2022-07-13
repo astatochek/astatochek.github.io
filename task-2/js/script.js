@@ -151,6 +151,10 @@ function resetGame() {
         document.getElementById(i).classList.add("x-button");
         document.getElementById(i).style.backgroundColor = "#15616d";
     }
+    if (winner == "none") {
+        score[1]++;
+        document.getElementById("score").innerText = `${score[0]} : ${score[1]}`;
+    }
     winner = "none";
     turn = 0;
     gameOver = false;
