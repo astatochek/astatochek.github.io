@@ -71,7 +71,10 @@ function makeComputerTurn() {
         }
     }
     if (possibleMoves.length == 0) {
-        checkResults()
+        let result = checkResults();
+        if (result == -1) {
+            winner = "Draw";
+        }
         return;
     }
     let chosenMove = makeMoveDecision();
@@ -114,14 +117,15 @@ function checkResults() {
         if (result == 1) {
             winner = "Player";
             endGame(i);
-            return;
+            return 0;
         }
         if (result == 2) {
             winner = "Computer";
             endGame(i);
-            return;
+            return 0;
         }
     }
+    return -1;
 };
 /**
  * Проверяет, являются ли ячейки из тройки одновременно отключенными и одного класса
