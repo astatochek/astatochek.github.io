@@ -90,7 +90,7 @@ function endGame(num) {
     if (winner == "Computer") score[1]++;
     document.getElementById("score").innerText = `${score[0]} : ${score[1]}`;
     for (let i = 0; i < 9; i++) {
-        if (!checkIfEmpty(i)) {
+        if (checkIfEmpty(i)) {
             document.getElementById(i).classList.remove("o-button");
             document.getElementById(i).classList.remove("x-button");
             document.getElementById(i).disabled = true;
