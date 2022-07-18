@@ -14,8 +14,10 @@ import Products from "./products/products.json";
 
 function App() {
 
-  const [layout, setLayout] = useState("main")
-  const [cart, setCart] = useState(new Array(Products.length).fill(0))
+  const [layout, setLayout] = useState("main") // layout принимает значения "main" или "cart"
+  const [cart, setCart] = useState(new Array(Products.length).fill(0)) // массив с количеством товаров для каждого товара из списка всех
+  // нумерация происходит по индексам, которые совпадают с id каждого товара, т.е. есть есть product,
+  // то cart[product.id] - количество выбранных товаров этого наименования
 
   return (
     <CartContext.Provider value={{cart, setCart}}>

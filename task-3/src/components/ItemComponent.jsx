@@ -12,6 +12,10 @@ const ItemComponent = (props) => {
 
     const { cart, setCart } = useContext(CartContext)
 
+    /**
+     * Прибавляет единицу к ячейке cart с индексом itemID
+     * @param {int} itemID 0 <= itemID < Product.length
+     */
     const BuyItem = (itemID) => {
         setCart(prev => {
             let next = [...prev]

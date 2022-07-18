@@ -5,13 +5,14 @@ import CartContext from "./context/CartContext";
 
 const CartComponent = () => {
 
-    const [ size, setSize ] = useState(0)
+    const [ size, setSize ] = useState(0) // суммарное количество всех выбранных пользователем товаров
+    // будет отображаться сверху у иконки корзины
 
     const { layout, setLayout} = useContext(LayoutContext)
     const { cart, setCart } = useContext(CartContext)
 
     useEffect(() => {
-        setSize(cart.reduce((prev, elem) => prev + elem, 0))
+        setSize(cart.reduce((prev, elem) => prev + elem, 0)) // обновляет значение size при изменении cart
     }, [cart])
 
     return (

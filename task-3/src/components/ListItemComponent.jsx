@@ -7,12 +7,12 @@ const ListItemComponent = (props) => {
 
     const { cart, setCart } = useContext(CartContext)
 
-    const id = props.id
-    const name = props.name 
-    const price = props.price
-    const url = props.url
+    const id = props.id // product.id
+    const name = props.name // product.name
+    const price = props.price // product.price
+    const url = props.url // product.url
 
-    const amount = cart[id]
+    const amount = cart[id] // количество элементов в корзине с выбранным ID
 
     /**
      * Добавляет или убавляет на 1 количество товара с выбранным ID в корзине 
@@ -27,6 +27,10 @@ const ListItemComponent = (props) => {
         })
     }
 
+    /**
+     * Убирает товар из корзины, выставляя 0 в соответствующей ячейке cart
+     * @param {int} itemID 0 <= itemID < Products.length (см. ./products/products.json)
+     */
     const setToZero = (itemID) => {
         setCart(prev => {
             let next = [...prev]

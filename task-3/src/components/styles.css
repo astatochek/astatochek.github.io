@@ -258,6 +258,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-height: 80vh;
 }
 
 .cart-item {
@@ -372,6 +373,7 @@ body {
 }
 
 .cart-total .paperwork {
+    font-size: 18px;
     height: 60px;
     border-radius: 20px;
     background-color: black;
