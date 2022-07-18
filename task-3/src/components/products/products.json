@@ -1,0 +1,74 @@
+[
+    {
+        "id": 0,
+        "name": "Apple EarPods (Lightning)",
+        "rating": 4.7,
+        "price": 7090,
+        "wireless": "False",
+        "url": "https://imgur.com/flDNJP8.png"
+    },
+    {
+        "id": 1,
+        "name": "BOROFONE BM52 BLACK",
+        "rating": 4.5,
+        "price": 1890,
+        "wireless": "False",
+        "url": "https://imgur.com/5UmxkmW.png"
+    },
+    {
+        "id": 2,
+        "name": "DENMEN DR10",
+        "rating": 4.1,
+        "price": 2290,
+        "wireless": "False",
+        "url": "https://imgur.com/dS31hnr.png"
+    },
+    {
+        "id": 3,
+        "name": "MOXOM MX-EP07 BLACK",
+        "rating": 3.9,
+        "price": 2290,
+        "wireless": "False",
+        "url": "https://imgur.com/g4HFR3P.png"
+    },
+    {
+        "id": 4,
+        "name": "MOXOM MX-EP20",
+        "rating": 2.6,
+        "price": 2090,
+        "wireless": "False",
+        "url": "https://imgur.com/9VBzUuc.png"
+    },
+    {
+        "id": 5,
+        "name": "WOPOW WE06",
+        "rating": 4.9,
+        "price": 2090,
+        "wireless": "False",
+        "url": "https://imgur.com/7tSVBdD.png"
+    },
+    {
+        "id": 6,
+        "name": "Apple AirPods 3 Lux Copy",
+        "rating": 4.3,
+        "price": 13790,
+        "wireless": "True",
+        "url": "https://imgur.com/rNGq9l2.png"
+    },
+    {
+        "id": 7,
+        "name": "BOROFONE BW03 PLUS",
+        "rating": 3.9,
+        "price": 9790,
+        "wireless": "True",
+        "url": "https://imgur.com/1eqz1qd.png"
+    },
+    {
+        "id": 8,
+        "name": "BOROFONE BO12",
+        "rating": 4.1,
+        "price": 7290,
+        "wireless": "True",
+        "url": "https://imgur.com/vfGDWZl.png"
+    }
+]
