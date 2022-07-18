@@ -44,7 +44,7 @@ body {
 .qpick-button {
     font-family: 'Inter', sans-serif;
     background-color: rgba(255, 255, 255, 0);
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 800;
     border: 0;
 }
@@ -100,7 +100,6 @@ body {
     align-self: center;
     display: flex;
     flex-direction: column;
-
 }
 
 .main .item-list {
@@ -168,7 +167,8 @@ body {
     font-weight: 600;
     color: #ffa542;
 }
-.buy-button{
+
+.buy-button {
     border: 0;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -177,12 +177,12 @@ body {
     transition: 0.2s;
 }
 
-.buy-button:hover{
+.buy-button:hover {
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.205);
     color: rgb(65, 65, 65);
 }
 
-.buy-button:active{
+.buy-button:active {
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.205);
     color: rgb(92, 92, 92);
 }
@@ -213,24 +213,179 @@ body {
     margin-top: 4px;
     margin-bottom: 4px;
 }
-.footer #globe{
+
+.footer #globe {
     width: 15px;
     margin-top: 5px;
 }
+
 .footer #social {
     width: 150px;
     margin-left: 20px;
 }
-.footer .item .row div{
+
+.footer .item .row div {
     margin: 5px;
 }
-.footer #chosen{
+
+.footer #chosen {
     color: #ffa542;
     font-weight: 600;
 }
-.footer .item .row{
+
+.footer .item .row {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+}
+
+.cart-wraper {
+    width: 85vw;
+    min-height: 50vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cart-menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cart-item {
+    width: 90%;
+    background-color: white;
+    margin: 20px;
+    height: 200px;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.084);
+    display: grid;
+    grid-template: 5fr 1fr / 4fr 1fr;
+}
+
+.cart-item .display {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cart-item .display img {
+    height: 150px;
+    margin: 10px;
+}
+
+.cart-item .display .name {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.cart-item .display .price {
+    color: rgb(148, 148, 148);
+    margin: 10px;
+}
+
+.cart-item .amount-button {
+    color: white;
+    font-size: 16px;
+    background-color: #ffa542;
+    border-radius: 50%;
+    border: 0;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cart-item .amount-wrapper {
+    position: relative;
+    top: -10px;
+    left: 30px;
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item .delete {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.cart-item .delete img {
+    width: 20px;
+    margin: 5px;
+}
+
+.cart-item .delete .delete-button {
+    margin: 10px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 30px;
+}
+
+.cart-item .total-wrapper {
+    position: relative;
+    top: -20px;
+}
+
+.cart-item .total {
+    font-weight: 600;
+    text-align: center;
+}
+
+.cart-total {
+    width: 90%;
+    background-color: white;
+    margin: 20px;
+    height: 120px;
+    border: 0;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.084);
+}
+
+.cart-total .total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.cart-total .total div {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.cart-total .paperwork {
+    height: 60px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.084);
+}
+
+.cart-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 30px;
 }

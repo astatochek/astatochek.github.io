@@ -4,6 +4,7 @@ import "./styles.css";
 
 import HeaderComponent from "./HeaderComponent";
 import MainComponent from "./MainComponent";
+import ListComponent from "./ListComponent";
 import FooterComponent from "./FooterComponent";
 
 import LayoutContext from "./context/LayoutContext";
@@ -21,7 +22,7 @@ function App() {
     <LayoutContext.Provider value={{layout, setLayout}}>
     <div className="wrapper">
       <HeaderComponent />
-      { layout === "main" ? <MainComponent /> : null }
+      { layout === "main" ? <MainComponent /> : <ListComponent /> }
       <FooterComponent />
     </div>
     </LayoutContext.Provider>

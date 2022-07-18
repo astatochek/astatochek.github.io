@@ -1,35 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles.css";
-import ItemComponent from "./ItemComponent";
 import Products from "./products/products.json"
+import ListItemComponent from "./ListItemComponent";
+import CartContext from "./context/CartContext";
 
 
-const MainComponent = () => {
+const ListComponent = () => {
+
+    const { cart, setCart } = useContext(CartContext)
+
+    const total = Products.reduce((prev, elem) => prev + elem.price * cart[elem.id], 0)
 
     return (
-    <div className="main">
-        <div className="gray-text">Наушники</div>
-        <div className="item-list">
-        {
-            Products.filter(product => product.wireless === "False").map( product => {
-                return (
-                    <ItemComponent key={product.id} id={product.id} name={product.name} price={product.price} rating={product.rating} url={product.url}/>
-                )
-            })
-        }
-        </div>
-        <div className="gray-text">Беспроводные наушники</div>
-        <div className="item-list">
-        {
-            Products.filter(product => product.wireless === "True").map( product => {
-                return (
-                    <ItemComponent key={product.id} id={product.id} name={product.name} price={product.price} rating={product.rating} url={product.url}/>
-                )
-            })
-        }
+    <div className="cart-wrapper">
+        <div className="cart-title">Корзина</div>
+        <div className="cart-menu">
+            <div className="cart-list">
+                {
+                    Products.filter(product => cart[product.id] > 0).map( product => {
+                        return (
+                            <ListItemComponent key={product.id} id={product.id} name={product.name} price={product.price} url={product.url}/>
+                        )
+                    })
+                }
+            </div>
+            <div className="cart-total">
+                <div className="total">
+                    <div>ИТОГО</div>
+                    <div>₽ {total}</div>
+                </div>
+                <div className="paperwork">Перейти к оформлению</div>
+            </div>
         </div>
     </div>
     )
 }
 
-export default MainComponent;
+export default ListComponent;
