@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/task-3/build/static/css/main.acbdcadb.css",
+    "main.js": "/task-3/build/static/js/main.6808a204.js",
+    "index.html": "/task-3/build/index.html",
+    "main.acbdcadb.css.map": "/task-3/build/static/css/main.acbdcadb.css.map",
+    "main.6808a204.js.map": "/task-3/build/static/js/main.6808a204.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.acbdcadb.css",
+    "static/js/main.6808a204.js"
+  ]
+}
