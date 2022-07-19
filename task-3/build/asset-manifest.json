@@ -7,7 +7,7 @@
     "main.6808a204.js.map": "task-3/build/static/js/main.6808a204.js.map"
   },
   "entrypoints": [
-    "task-3/build/static/css/main.7e95117c.css",
-    "task-3/build/static/js/main.6808a204.js"
+    "static/css/main.7e95117c.css",
+    "static/js/main.6808a204.js"
   ]
 }
