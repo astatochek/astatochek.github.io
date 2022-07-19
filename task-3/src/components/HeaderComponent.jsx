@@ -6,9 +6,7 @@ import QpickComponent from "./QpickComponent";
 const HeaderComponent = () => {
     return (
     <div className="header">
-        <div className="name-block">
-            <QpickComponent />
-        </div>
+        <QpickComponent />
         <CartComponent />
     </div>
     )

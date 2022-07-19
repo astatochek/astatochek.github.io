@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
+import {
+    Link,
+} from "react-router-dom";
 import "./styles.css";
-import LayoutContext from "./context/LayoutContext";
 
 const QpickComponent = () => {
 
-    const { layout, setLayout} = useContext(LayoutContext)
-
     return (
     <div>
-        <button className="qpick-button" onClick={() => {
-            setLayout("main")
-        }}>QPICK</button>
+        <Link to="/">
+            <button className="qpick-button">QPICK</button>
+        </Link>
     </div>
     )
 }
