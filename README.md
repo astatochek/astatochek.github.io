@@ -32,6 +32,6 @@
     На мобильном устройстве страница выглядит довольно прилично, но кнопки после нажатия сохраняют состояние `hover`. Почему - не знаю, но исправлять не было особенного желания.
 
 * ## QPICK через React <a name="task-3"></a>
-    Сделанное задание: [QPICK через React](https://astatochek.github.io/task-3/)
+    Сделанное задание: [QPICK через React](https://astatochek.github.io/task-3/build/index.html)
 
 
